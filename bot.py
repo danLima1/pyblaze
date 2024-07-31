@@ -21,7 +21,7 @@ app = Client("my_bot", api_id=api_id, api_hash=api_hash, bot_token=bot_token)
 # Banco de dados fake
 fake_db = {}
 user_states = {}  # Dicionário para armazenar o estado do usuário
-group_chat_id = -1002188373610  # Substitua pelo chat_id do grupo de onde os sinais virão
+group_chat_id = -1002235935199  # Substitua pelo chat_id do grupo de onde os sinais virão
 
 # Variáveis globais para sinais
 sinal_resultado = ''
@@ -229,7 +229,7 @@ def handle_bet(chat_id, driver, signal_id):
             time.sleep(1)
 
             # Espera pelo resultado da aposta
-            time.sleep(20)
+            time.sleep(24)
             resultado_api = get_recent_results()
             logging.info(f'Resultado da API: {resultado_api}')
 
