@@ -128,3 +128,103 @@
 2024-07-31 17:34:55,066 - INFO - Botão da cor branca apertado novamente
 2024-07-31 17:34:56,105 - INFO - Aposta na cor branca confirmada novamente
 2024-07-31 17:34:57,120 - INFO - Após o Martingale, valores da aposta resetados aos valores originais
+2024-07-31 20:06:33,345 - INFO - Connecting...
+2024-07-31 20:06:33,463 - INFO - Connected! Production DC1 - IPv4
+2024-07-31 20:06:33,466 - INFO - NetworkTask started
+2024-07-31 20:06:34,129 - INFO - Session initialized: Layer 158
+2024-07-31 20:06:34,129 - INFO - Device: CPython 3.7.9 - Pyrogram 2.0.106
+2024-07-31 20:06:34,129 - INFO - System: Windows 10 (en)
+2024-07-31 20:06:34,129 - INFO - Session started
+2024-07-31 20:06:34,133 - INFO - PingTask started
+2024-07-31 20:06:34,527 - INFO - Started 20 HandlerTasks
+2024-07-31 20:07:13,101 - INFO - Mensagem recebida no grupo -1002235935199: Sinais do vip sem gale!
+2024-07-31 20:14:01,073 - ERROR - could not convert string to float: 'Vermelho 0,20\nPreto 0,20\nBranco 0,10'
+Traceback (most recent call last):
+  File "C:\Users\dn\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.7_qbz5n2kfra8p0\LocalCache\local-packages\Python37\site-packages\pyrogram\dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "C:\Users\dn\Documents\projetos\pyblaze\pyblaze\bot.py", line 112, in handle_messages
+    color_bet_amount = float(message.text)
+ValueError: could not convert string to float: 'Vermelho 0,20\nPreto 0,20\nBranco 0,10'
+2024-07-31 20:14:15,778 - INFO - Mensagem recebida no grupo -1002235935199: 22 win seguidos (listas)
+2024-07-31 20:14:24,300 - ERROR - could not convert string to float: '0,20 e 0,10'
+Traceback (most recent call last):
+  File "C:\Users\dn\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.7_qbz5n2kfra8p0\LocalCache\local-packages\Python37\site-packages\pyrogram\dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "C:\Users\dn\Documents\projetos\pyblaze\pyblaze\bot.py", line 112, in handle_messages
+    color_bet_amount = float(message.text)
+ValueError: could not convert string to float: '0,20 e 0,10'
+2024-07-31 20:15:13,399 - ERROR - could not convert string to float: 'gustavo.macagnan.jd@gmail.com'
+Traceback (most recent call last):
+  File "C:\Users\dn\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.7_qbz5n2kfra8p0\LocalCache\local-packages\Python37\site-packages\pyrogram\dispatcher.py", line 240, in handler_worker
+    await handler.callback(self.client, *args)
+  File "C:\Users\dn\Documents\projetos\pyblaze\pyblaze\bot.py", line 112, in handle_messages
+    color_bet_amount = float(message.text)
+ValueError: could not convert string to float: 'gustavo.macagnan.jd@gmail.com'
+2024-07-31 20:15:40,600 - INFO - Connecting...
+2024-07-31 20:15:42,722 - INFO - Connected! Production DC1 - IPv4
+2024-07-31 20:15:42,722 - INFO - NetworkTask started
+2024-07-31 20:15:43,619 - INFO - Session initialized: Layer 158
+2024-07-31 20:15:43,619 - INFO - Device: CPython 3.7.9 - Pyrogram 2.0.106
+2024-07-31 20:15:43,619 - INFO - System: Windows 10 (en)
+2024-07-31 20:15:43,619 - INFO - Session started
+2024-07-31 20:15:43,622 - INFO - PingTask started
+2024-07-31 20:15:44,229 - INFO - Started 20 HandlerTasks
+2024-07-31 20:19:32,477 - ERROR - Future exception was never retrieved
+future: <Future finished exception=NoSuchElementException()>
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.7_3.7.2544.0_x64__qbz5n2kfra8p0\lib\concurrent\futures\thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\dn\Documents\projetos\pyblaze\pyblaze\bot.py", line 155, in selenium_logic
+    driver = login_blaze(email, password)
+  File "C:\Users\dn\Documents\projetos\pyblaze\pyblaze\bot.py", line 42, in login_blaze
+    driver.find_element(By.XPATH, '//*[@id="header"]/div/div[2]/div/div/div[1]/a').click()
+  File "C:\Users\dn\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.7_qbz5n2kfra8p0\LocalCache\local-packages\Python37\site-packages\selenium\webdriver\remote\webdriver.py", line 739, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+  File "C:\Users\dn\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.7_qbz5n2kfra8p0\LocalCache\local-packages\Python37\site-packages\selenium\webdriver\remote\webdriver.py", line 345, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\dn\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.7_qbz5n2kfra8p0\LocalCache\local-packages\Python37\site-packages\selenium\webdriver\remote\errorhandler.py", line 229, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="header"]/div/div[2]/div/div/div[1]/a"}
+  (Session info: chrome=127.0.6533.74); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Stacktrace:
+	GetHandleVerifier [0x00007FF6B9B19632+30946]
+	(No symbol) [0x00007FF6B9ACE3C9]
+	(No symbol) [0x00007FF6B99C6FDA]
+	(No symbol) [0x00007FF6B9A1822C]
+	(No symbol) [0x00007FF6B9A1850C]
+	(No symbol) [0x00007FF6B9A5DCB7]
+	(No symbol) [0x00007FF6B9A3CAAF]
+	(No symbol) [0x00007FF6B9A5B041]
+	(No symbol) [0x00007FF6B9A3C813]
+	(No symbol) [0x00007FF6B9A0A6E5]
+	(No symbol) [0x00007FF6B9A0B021]
+	GetHandleVerifier [0x00007FF6B9C4F83D+1301229]
+	GetHandleVerifier [0x00007FF6B9C5BDB7+1351783]
+	GetHandleVerifier [0x00007FF6B9C52A03+1313971]
+	GetHandleVerifier [0x00007FF6B9B4DD06+245686]
+	(No symbol) [0x00007FF6B9AD758F]
+	(No symbol) [0x00007FF6B9AD3804]
+	(No symbol) [0x00007FF6B9AD3992]
+	(No symbol) [0x00007FF6B9ACA3EF]
+	BaseThreadInitThunk [0x00007FFC7EAE7614+20]
+	RtlUserThreadStart [0x00007FFC7F9826B1+33]
+
+2024-07-31 20:22:51,605 - INFO - Connecting...
+2024-07-31 20:22:51,729 - INFO - Connected! Production DC1 - IPv4
+2024-07-31 20:22:51,730 - INFO - NetworkTask started
+2024-07-31 20:22:52,291 - INFO - Session initialized: Layer 158
+2024-07-31 20:22:52,291 - INFO - Device: CPython 3.7.9 - Pyrogram 2.0.106
+2024-07-31 20:22:52,291 - INFO - System: Windows 10 (en)
+2024-07-31 20:22:52,291 - INFO - Session started
+2024-07-31 20:22:52,294 - INFO - PingTask started
+2024-07-31 20:22:52,582 - INFO - Started 20 HandlerTasks
+2024-07-31 20:53:25,439 - INFO - Connecting...
+2024-07-31 20:53:25,579 - INFO - Connected! Production DC1 - IPv4
+2024-07-31 20:53:25,580 - INFO - NetworkTask started
+2024-07-31 20:53:26,605 - INFO - Session initialized: Layer 158
+2024-07-31 20:53:26,605 - INFO - Device: CPython 3.7.9 - Pyrogram 2.0.106
+2024-07-31 20:53:26,605 - INFO - System: Windows 10 (en)
+2024-07-31 20:53:26,605 - INFO - Session started
+2024-07-31 20:53:26,608 - INFO - PingTask started
+2024-07-31 20:53:26,923 - INFO - Started 20 HandlerTasks
+2024-07-31 21:05:05,353 - INFO - Mensagem recebida no grupo -1002235935199: Sinais do vip sem gale!

@@ -32,7 +32,6 @@ sinal_id = None  # ID do sinal para garantir que Martingale ocorra apenas uma ve
 # Armazenar as informações dos usuários
 user_bets = {}
 
-
 def login_blaze(email, password):
     driver = webdriver.Chrome()
     driver.get('https://blaze.com')
@@ -65,13 +64,25 @@ def login_blaze(email, password):
 async def send_welcome(client, message):
     await message.reply("Bem-vindo ao bot! Para fazer suas apostas automáticas clique em /login")
 
-
 @app.on_message(filters.command("login"))
 async def get_email(client, message):
     chat_id = message.chat.id
     user_states[chat_id] = 'awaiting_email'
     await message.reply("Por favor, forneça o endereço de email da sua conta Blaze:")
 
+@app.on_message(filters.command("stop"))
+async def stop_bot(client, message):
+    chat_id = message.chat.id
+    if chat_id in user_bets and user_bets[chat_id]['driver'] is not None:
+        try:
+            user_bets[chat_id]['driver'].quit()
+            await message.reply("WebDriver fechado e bot parado com sucesso!")
+            del user_bets[chat_id]
+        except Exception as e:
+            logging.error(f"Erro ao fechar o WebDriver: {e}")
+            await message.reply("Erro ao tentar fechar o WebDriver.")
+    else:
+        await message.reply("Nenhuma sessão de WebDriver ativa encontrada.")
 
 @app.on_message(filters.text)
 async def handle_messages(client, message):
@@ -147,7 +158,6 @@ async def handle_messages(client, message):
             loop.run_in_executor(None, selenium_logic, chat_id)
             del user_states[chat_id]
 
-
 def selenium_logic(chat_id):
     user_info = user_bets[chat_id]
     email = user_info['email']
@@ -155,7 +165,6 @@ def selenium_logic(chat_id):
     driver = login_blaze(email, password)
     user_bets[chat_id]['driver'] = driver
     handle_bet(chat_id, driver, None)
-
 
 def handle_bet(chat_id, driver, signal_id):
     global sinal_resultado, sinal_analise, sinal_cor, sinal_id
@@ -318,6 +327,5 @@ def estrategy(signal):
         sinal_analise = True
     else:
         sinal_analise = False
-
 
 app.run()

@@ -1,0 +1,4 @@
+pyrogram
+selenium
+requests
+asyncio
